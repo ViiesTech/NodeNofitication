@@ -7,7 +7,7 @@ import admin from 'firebase-admin'
 process.env.GOOGLE_APPLICATION_CREDENTIALS
 
 
-import serviceAccount from './jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json';
+import serviceAccount from './jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json?import';
 connectDB()
 
 const app = express()
