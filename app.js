@@ -7,6 +7,7 @@ import admin from 'firebase-admin'
 process.env.GOOGLE_APPLICATION_CREDENTIALS
 
 
+const serviceAccount = require('/Users/macbook/MyAppApi/Notification/jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json'); // Update the path
 connectDB()
 
 const app = express()
@@ -30,7 +31,7 @@ app.use(
 
 
 initializeApp({
-    credential: admin.credential.cert(process.env.GOOGLE_APPLICATION_CREDENTIALS),
+    credential: admin.credential.cert(serviceAccount),
     projectId:'jpguide-69169'
 })
 
