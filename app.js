@@ -24,9 +24,9 @@ app.use(
 )
 
 
-app.get("/getting", (req, res)=>{
-    res.send("Working")
-})
+// app.get("/getting", (req, res)=>{
+//     res.send("Working")
+// })
 
 
 initializeApp({
