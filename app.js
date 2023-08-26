@@ -7,7 +7,7 @@ import admin from 'firebase-admin'
 process.env.GOOGLE_APPLICATION_CREDENTIALS
 
 
-const serviceAccount = require('/Users/macbook/MyAppApi/Notification/jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json'); // Update the path
+import serviceAccount from '/Users/macbook/MyAppApi/Notification/jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json';
 connectDB()
 
 const app = express()
