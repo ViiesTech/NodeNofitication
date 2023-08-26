@@ -2,7 +2,7 @@ import express,{json} from "express";
 import connectDB from "./config/connectDB.js";
 import { initializeApp, applicationDefault} from "firebase-admin/app";
 import {getMessaging} from 'firebase-admin/messaging'
-import cors from 'cors'
+// import cors from 'cors'
 import admin from 'firebase-admin'
 process.env.GOOGLE_APPLICATION_CREDENTIALS
 
@@ -12,17 +12,17 @@ connectDB()
 
 const app = express()
 app.use(express.json())
-app.use(
-    cors({
-        origin: "*"
-    })
-)
+// app.use(
+//     cors({
+//         origin: "*"
+//     })
+// )
 
-app.use(
-    cors({
-        methods: ["GET", "POST", "DELETE", "PUT", "UPDATE", "PATCH"],
-    })
-)
+// app.use(
+//     cors({
+//         methods: ["GET", "POST", "DELETE", "PUT", "UPDATE", "PATCH"],
+//     })
+// )
 
 
 app.get("/", (req, res)=>{
