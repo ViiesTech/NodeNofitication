@@ -7,7 +7,7 @@ import admin from 'firebase-admin'
 process.env.GOOGLE_APPLICATION_CREDENTIALS
 
 
-import jsonFile from './jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json'
+import countryTable from "./jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json" assert { type: "json" };
 connectDB()
 
 const app = express()
@@ -31,7 +31,7 @@ app.get("/", (req, res)=>{
 
 
 initializeApp({
-    credential: admin.credential.cert(process.env.GOOGLE_APPLICATION_CREDENTIALS        ),
+    credential: admin.credential.cert(countryTable),
     projectId:'jpguide-69169'
 })
 
