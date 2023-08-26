@@ -1,6 +1,6 @@
 import express from "express";
 import admin from "firebase-admin";
-import * as countryTable from "./jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json";
+const countryTable = require("./jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json");
 
 const app = express();
 
