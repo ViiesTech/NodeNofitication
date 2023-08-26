@@ -7,7 +7,7 @@ import admin from 'firebase-admin'
 process.env.GOOGLE_APPLICATION_CREDENTIALS
 
 
-import countryTable from "./jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json" assert { type: "json" };
+import * as countryTable from "./jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json";
 // connectDB()
 
 const app = express()
