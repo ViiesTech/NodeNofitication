@@ -1,17 +1,18 @@
 import express from "express";
 import admin from "firebase-admin";
-const countryTable = require("./jpguide-69169-firebase-adminsdk-plbpy-2b1ac87c0b.json");
 
 const app = express();
 
 app.use(express.json());
 
+
 app.get("/", (req, res) => {
     res.send("Working");
 });
 
+
 admin.initializeApp({
-    credential: admin.credential.cert(countryTable),
+    credential: admin.credential.cert(process.env.GOOGLE_APPLICATION_CREDENTIALS),
     projectId: 'jpguide-69169'
 });
 
