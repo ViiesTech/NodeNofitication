@@ -50,8 +50,11 @@ admin.initializeApp({
 
 
 app.post('/sendNotifications', async (req, res) => {
-    const recieveToken = req.body.fcmToken; // Fixed typo in variable name
-    const notificationMessage = req.body.message; // Changed variable name for consistency
+    const recieveToken = req?.body?.fcmToken; // Fixed typo in variable name
+    const notificationMessage = req?.body?.message; // Changed variable name for consistency
+
+
+    console.log(recieveToken)
 
 
     const messages = recieveToken?.map((token) => ({
@@ -64,15 +67,13 @@ app.post('/sendNotifications', async (req, res) => {
 
 
 
-    const sendPromises = messages.map(async (message) => await admin.messaging().send(message));
-
-
+    const sendPromises = messages?.map(async (message) => await admin.messaging().send(message));
 
     try {
         await Promise.all(sendPromises);
         res.status(200).json({
             message: "Successfully sent messages",
-            tokens: fcmTokens
+            tokens: recieveToken
         });
         console.log("Successfully sent messages");
     } catch (error) {
